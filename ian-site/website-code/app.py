@@ -1,6 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
 
-app = Flask(_name_)
+app = Flask(__name__)
 
-if _name_ == '_main_':
-    app.run()
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
