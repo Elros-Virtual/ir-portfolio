@@ -16,9 +16,10 @@ RUN ls -la
 
 RUN pwd
 
-COPY ./website-code/ /app
+COPY /website-code/ /app
 
 WORKDIR /app
 
 CMD python3 app.py
+
 
