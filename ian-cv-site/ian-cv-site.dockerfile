@@ -12,10 +12,6 @@ RUN pip3 install flask
 
 RUN mkdir /app
 
-RUN ls -la
-
-RUN pwd
-
 COPY /website-code/ /app
 
 WORKDIR /app
