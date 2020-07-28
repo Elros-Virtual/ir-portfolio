@@ -16,5 +16,5 @@ WORKDIR /app
 
 COPY /Websites-code /app
 
-CMD python site.py
+CMD python app.py
 
