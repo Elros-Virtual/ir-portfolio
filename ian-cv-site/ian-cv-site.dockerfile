@@ -8,7 +8,7 @@ RUN apt-get install -y python3.8
 
 RUN apt install -y python3-pip
 
-RUN pip install flask
+RUN pip3 install flask
 
 RUN mkdir /app
 
@@ -16,5 +16,5 @@ WORKDIR /app
 
 COPY /Websites-code /app
 
-CMD python app.py
+CMD python3 app.py
 
