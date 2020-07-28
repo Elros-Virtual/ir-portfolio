@@ -16,7 +16,7 @@ RUN ls -la
 
 RUN pwd
 
-COPY /Website-code/ /app
+COPY ./Website-code/ /app
 
 WORKDIR /app
 
