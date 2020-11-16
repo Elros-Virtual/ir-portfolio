@@ -1,6 +1,10 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<h1>This is the articles page</h1>
-<p class="lead">Here you will read the things possibly some stuff</p>
+<h1>Articles</h1>
+<ul class="list-group">
+    {% for article in articles %}
+    <li class="list-group-item">{{article.title}}</li>
+    {% endfor %}
+</ul>
 {% endblock %}
