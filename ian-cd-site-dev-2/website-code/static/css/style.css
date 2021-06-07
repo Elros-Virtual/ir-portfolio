@@ -1,0 +1,31 @@
+
+header {
+    text-align: center;
+    background-color: cadetblue;
+    color: black;
+    padding: 10px;
+    font-size: 60px;
+
+}
+
+/* h1 {
+    color:rgb(10, 77, 13);
+    font-size:60px;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+
+} */
+
+
+body {
+	line-height: 1;
+    background: rgb(204, 187, 165);
+    display: block;
+}
+
+#demo{
+    color:rgb(10, 77, 13);
+    font-size: 60px;
+}
