@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask.helpers import url_for
 
 
@@ -39,6 +39,25 @@ def hobbies():
 @app.route("/business")
 def business():
     return render_template('business.html')
+
+
+@app.route("/subscribe", methods=["POST", "GET"])
+def subscribe():
+    name = request.form.get("name")
+    email = request.form.get("email")
+
+    if not name or not email:
+        error_statement = "All form fields required"
+        return render_template('subscribe.html', error_statement=error_statement, name=name, email=email)
+
+    return url_for('/form')
+
+
+@app.route("/form", methods=["POST"])
+def form():
+    name = request.form.get("name")
+    email = request.form.get("email")
+    return render_template('form.html', name=name, email=email)
 
 
 if __name__ == '__main__':

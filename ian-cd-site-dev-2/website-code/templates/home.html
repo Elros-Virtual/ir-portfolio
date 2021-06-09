@@ -1,20 +1,21 @@
+{% extends 'nav.html' %}
 <!DOCTYPE HTML>
 
 <!-- Website created by Ian A roberts -->
 
 <html>
+{% block content %}
 
-<head>
+<!-- <head>
     <title>Ian Roberts</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <!-- CSS -->
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-    <!--JS-->
-</head>
+    CSS -->
+<!-- <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    JS-->
+<!-- </head> -->
 
 <body>
-
     <header>
         <h1>Ian Alexander Roberts</h1>
     </header>
@@ -31,5 +32,6 @@
 
 </body>
 
+{% endblock %}
 
 </html>
