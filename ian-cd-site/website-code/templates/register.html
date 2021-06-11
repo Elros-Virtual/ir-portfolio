@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>Please register your intent</h1>
+<br>
+<br>
+<form action="/register" method="POST">
+    <input type="text" placeholder="Name" name="name">
+    <input type="submit" value="add name">
+</form>
+
+
+
+{% endblock %}
