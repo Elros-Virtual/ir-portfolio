@@ -83,15 +83,28 @@ def register():
         new_user = users(name=name)
 
         try:
-            db.seesion.add(new_user)
+            db.session.add(new_user)
             db.session.commit()
             return redirect('/register')
         except:
             return "There was an error"
 
     else:
+        user_list = users.query.order_by(users.date_created)
+        return render_template('register.html', user_list=user_list)
 
-        return render_template('register.html')
+
+# @app.route('/update/<int:id>', methods=["POST", "GET"])
+# def update_user(id):
+#     user_to_update = users.query.get_or_404(id)
+#     if request.method == "POST":
+#         user_to_update = request.form('name')
+#         try:
+#             db.session.commit()
+#             return redirect('/register')
+#         except:
+#             return "there was an error"
+#     return render_template('myaccount.html', user_to_update=user_to_update)
 
 
 if __name__ == '__main__':

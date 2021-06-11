@@ -2,15 +2,20 @@
 
 
 {% block content %}
+<div>
+    <h1>Please register your intent</h1>
+    <br>
+    <br>
+    <form action="/register" method="POST">
+        <input type="text" placeholder="Name" name="name">
+        <input type="submit" value="add name">
+    </form>
+    <br><br>
 
-<h1>Please register your intent</h1>
-<br>
-<br>
-<form action="/register" method="POST">
-    <input type="text" placeholder="Name" name="name">
-    <input type="submit" value="add name">
-</form>
-
-
-
+    {% for user in user_list %}
+    <h4>
+        {{ user.name }}
+    </h4>
+    {% endfor %}
+</div>
 {% endblock %}
