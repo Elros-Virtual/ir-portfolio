@@ -8,25 +8,14 @@ header {
 
 }
 
-/* h1 {
-    color:rgb(10, 77, 13);
-    font-size:60px;
-    margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
-
-} */
-
-
 body {
 	line-height: 1;
     background: rgb(143, 173, 122);
-    background-image: url("../images/01.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/bg.jpg");
-    background-size: auto,								auto,														100% auto;
-    background-position: center,								center,														top center;
-    background-repeat: repeat,								no-repeat,													no-repeat;
-    background-attachment: fixed,								fixed,														fixed;
+    background-image: url("../images/pic01.jpg");
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
 }
 
 #demo{
@@ -34,5 +23,11 @@ body {
     font-size: 60px;
 }
 
-article {
-	display: block;}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/bg.jpg"); */

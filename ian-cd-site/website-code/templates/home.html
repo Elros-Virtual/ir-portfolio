@@ -6,31 +6,40 @@
 <html>
 {% block content %}
 
-<!-- <head>
+<head>
     <title>Ian Roberts</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    CSS -->
-<!-- <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-    JS-->
-<!-- </head> -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+
 
 <body>
+
+
+
     <header>
         <h1>Ian Alexander Roberts</h1>
     </header>
 
+
+
+
+
     <article>
-        <img src="{{ url_for('static', filename='images/pic01.jpg')}}" width=1100>
+
+        <img src="{{ url_for('static', filename='images/ian-logo.svg')}}" class="center" width="600" height="600">
+
     </article>
 
-    <footer>
+    <!-- <footer>
         <p id="demo">This is stuff</p>
         <script src="{{ url_for('static', filename='js/myfile.js') }}"></script>
-    </footer>
+    </footer> -->
 
 
 </body>
+
 
 {% endblock %}
 
