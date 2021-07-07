@@ -1,22 +1,22 @@
 from flask import Flask, render_template, request, redirect
 from flask.helpers import url_for
-from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
-from sqlalchemy.sql.functions import user
+# from flask_sqlalchemy import SQLAlchemy
+# from datetime import datetime
+# from sqlalchemy.sql.functions import user
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
-db = SQLAlchemy(app)
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+# db = SQLAlchemy(app)
 
 
-class users(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(200), nullable=False)
-    date_created = db.Column(db.DateTime, default=datetime.utcnow)
+# class users(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String(200), nullable=False)
+#     date_created = db.Column(db.DateTime, default=datetime.utcnow)
 
-    def __repr__(self):
-        return '<name %r>' % self.id
+#     def __repr__(self):
+#         return '<name %r>' % self.id
 
 
 @app.route("/")
@@ -74,23 +74,23 @@ def form():
     return render_template('form.html', name=name, email=email)
 
 
-@app.route("/register", methods=["POST", "GET"])
-def register():
+# @app.route("/register", methods=["POST", "GET"])
+# def register():
 
-    if request.method == "POST":
-        name = request.form.get("name")
-        new_user = users(name=name)
+#     if request.method == "POST":
+#         name = request.form.get("name")
+#         new_user = users(name=name)
 
-        try:
-            db.session.add(new_user)
-            db.session.commit()
-            return redirect('/register')
-        except:
-            return "There was an error"
+#         try:
+#             db.session.add(new_user)
+#             db.session.commit()
+#             return redirect('/register')
+#         except:
+#             return "There was an error"
 
-    else:
-        user_list = users.query.order_by(users.date_created)
-        return render_template('register.html', user_list=user_list)
+#     else:
+#         user_list = users.query.order_by(users.date_created)
+#         return render_template('register.html', user_list=user_list)
 
 
 # @app.route('/update/<int:id>', methods=["POST", "GET"])
@@ -107,6 +107,6 @@ def register():
 
 
 if __name__ == '__main__':
-    db.create_all()
+    # db.create_all()
     app.run(debug=True, host='0.0.0.0')
     # app.run(debug=True)
